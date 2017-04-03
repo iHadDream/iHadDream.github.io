@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="工具," />
 
 
 
@@ -87,19 +87,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="gulp API DOC1.gulp.src(globs[,”options”]);需要处理的源文件的路径，借鉴unix操作系统管道（pipe）思想，前一级的输出直接变成后一级的输入globs:需要处理的源文件匹配符路径">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/04/03/hello-world/index.html">
+<meta property="og:title" content="gulp begin">
+<meta property="og:url" content="http://yoursite.com/2017/04/03/gulp-begin/index.html">
 <meta property="og:site_name" content="王楷文的个人主页">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-04-03T04:13:24.900Z">
+<meta property="og:description" content="gulp API DOC1.gulp.src(globs[,”options”]);需要处理的源文件的路径，借鉴unix操作系统管道（pipe）思想，前一级的输出直接变成后一级的输入globs:需要处理的源文件匹配符路径">
+<meta property="og:updated_time" content="2017-04-03T08:31:18.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="gulp begin">
+<meta name="twitter:description" content="gulp API DOC1.gulp.src(globs[,”options”]);需要处理的源文件的路径，借鉴unix操作系统管道（pipe）思想，前一级的输出直接变成后一级的输入globs:需要处理的源文件匹配符路径">
 
 
 
@@ -127,13 +124,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/03/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/03/gulp-begin/"/>
 
 
 
 
 
-  <title> Hello World | 王楷文的个人主页 </title>
+  <title> gulp begin | 王楷文的个人主页 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +269,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/gulp-begin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王楷文">
@@ -293,7 +290,7 @@ Quick">
             
             
               
-                Hello World
+                gulp begin
               
             
           </h1>
@@ -308,7 +305,7 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T12:13:24+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T16:06:26+08:00">
                 2017-04-03
               </time>
             
@@ -344,16 +341,36 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p><strong>gulp API DOC</strong><br><strong>1.gulp.src(globs[,”options”]);</strong><br>需要处理的源文件的路径，借鉴unix操作系统管道（pipe）思想，前一级的输出直接变成后一级的输入<br>globs:需要处理的源文件匹配符路径<a id="more"></a></p>
+<p><strong>2.gulp.dest(path[,”options”]);</strong><br>指定处理完后文件指向的路径</p>
+<p><strong>3.gulp.task(name[,”deps”],fn);</strong><br>task定义一个gulp任务<br>deps（可选），该任务依赖的任务</p>
+<p><strong>4.gulp.watch(glob[,opts],tasks) or gulp.watch(glob [, opts, cb])</strong><br>4.1、说明：watch方法是用于监听文件变化，文件一修改就会执行指定的任务；<br>4.2、glob：  需要处理的源文件匹配符路径。类型(必填)：String or StringArray；<br>4.3、opts：  类型(可选)：Object 具体看<a href="https://github.com/shama/gaze；" target="_blank" rel="external">https://github.com/shama/gaze；</a><br>4.4、tasks：  类型(必填)：StringArray 需要执行的任务的名称数组；<br>4.5、cb(event)：  类型(可选)：Function 每个文件变化执行的回调函数；</p>
+<p>安装gulp-sass插件（拿该插件进行示例）</p>
+<p>进入你的项目文件路径中后，执行cnpm install gulp-sass –save-dev</p>
+<p>新建gulpfile.js（重要，重要，重要）</p>
+<p>gulpfile.js是gulp的配置文件，放于根目录中。</p>
+<p>gulp安装教程，使用教程，简单的自动化任务教程</p>
+<p>运行gulp</p>
+<p>执行  gulp 任务名称    运行该任务 示例：gulp sass 执行gulpfile.js中的sass任务 </p>
+<p>gulp安装教程，使用教程，简单的自动化任务教程</p>
+<p>执行  gulp   调用default中的所有任务 </p>
+<p>gulp安装教程，使用教程，简单的自动化任务教程</p>
+<p>当 src/css/test.scss 发生修改时，会自动执行sass任务。</p>
+<p>gulp安装教程，使用教程，简单的自动化任务教程</p>
+<p>常用插件</p>
+<p>sass的编译（gulp-sass）</p>
+<p>less编译 （gulp-less）</p>
+<p>重命名（gulp-rename）</p>
+<p>自动添加css前缀（gulp-autoprefixer）</p>
+<p>压缩css（gulp-clean-css）</p>
+<p>js代码校验（gulp-jshint）</p>
+<p>合并js文件（gulp-concat）</p>
+<p>压缩js代码（gulp-uglify）</p>
+<p>压缩图片（gulp-imagemin）</p>
+<p>自动刷新页面（gulp-livereload，谷歌浏览器亲测，谷歌浏览器需安装livereload插件）</p>
+<p>图片缓存，只有图片替换了才压缩（gulp-cache）</p>
+<p>更改提醒（gulp-notify）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//导入工具包 require(&apos;node_modules里对应模块&apos;)</div><div class="line">var gulp = require(&apos;gulp&apos;), //本地安装gulp所用到的地方</div><div class="line">    sass = require(&apos;gulp-sass&apos;);</div><div class="line"> </div><div class="line">//定义一个sass任务（自定义任务名称）</div><div class="line">gulp.task(&apos;sass&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;src/css/test.scss&apos;) //该任务针对的文件</div><div class="line">        .pipe(sass()) //该任务调用的模块</div><div class="line">        .pipe(gulp.dest(&apos;src/css&apos;)); //将会在src/css下生成index.css</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">gulp.task(&apos;default&apos;,[&apos;sass&apos;, &apos;watch1&apos;]); //定义默认任务 elseTask为其他任务，该示例没有定义elseTask任务</div><div class="line"> </div><div class="line">gulp.task(&apos;watch1&apos;, function()&#123;</div><div class="line">	return gulp.watch(&apos;src/css/test.scss&apos;,[&apos;sass&apos;]);</div><div class="line">&#125;) //定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数</div><div class="line">//gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组) </div><div class="line">//gulp.dest(path[, options]) 处理完后文件生成路径</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -380,6 +397,12 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+        </div>
+      
 
       
         
@@ -389,14 +412,18 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/03/what-is-XSS-and-CSRF-How-to-preventive/" rel="next" title="what is XSS and CSRF?How to preventive?">
+                <i class="fa fa-chevron-left"></i> what is XSS and CSRF?How to preventive?
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/03/我的第一篇文章/" rel="prev" title="我的第一篇文章">
-                我的第一篇文章 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/03/JS-module-programming/" rel="prev" title="JS module programming">
+                JS module programming <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -450,17 +477,8 @@ Quick">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/wkw.jpg"
@@ -542,22 +560,6 @@ Quick">
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
