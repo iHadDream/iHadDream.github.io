@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="模块化," />
 
 
 
@@ -87,19 +87,31 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="1.模块的对象写法
+123456789var module1=new Object(&amp;#123;	_count : 0;	m1 : function()&amp;#123;		...	&amp;#125;,	m2 : function()&amp;#123;		...		&amp;#125;&amp;#125;);
+使用的时候直接调用模块属性
+1module1.m1();
+BUT 外部可以更改内部变量
+1module1._count=1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/04/03/hello-world/index.html">
+<meta property="og:title" content="JS module programming">
+<meta property="og:url" content="http://yoursite.com/2017/04/03/JS-module-programming/index.html">
 <meta property="og:site_name" content="王楷文的个人主页">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-04-03T04:13:24.900Z">
+<meta property="og:description" content="1.模块的对象写法
+123456789var module1=new Object(&amp;#123;	_count : 0;	m1 : function()&amp;#123;		...	&amp;#125;,	m2 : function()&amp;#123;		...		&amp;#125;&amp;#125;);
+使用的时候直接调用模块属性
+1module1.m1();
+BUT 外部可以更改内部变量
+1module1._count=1">
+<meta property="og:updated_time" content="2017-04-03T08:20:40.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="JS module programming">
+<meta name="twitter:description" content="1.模块的对象写法
+123456789var module1=new Object(&amp;#123;	_count : 0;	m1 : function()&amp;#123;		...	&amp;#125;,	m2 : function()&amp;#123;		...		&amp;#125;&amp;#125;);
+使用的时候直接调用模块属性
+1module1.m1();
+BUT 外部可以更改内部变量
+1module1._count=1">
 
 
 
@@ -127,13 +139,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/03/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/03/JS-module-programming/"/>
 
 
 
 
 
-  <title> Hello World | 王楷文的个人主页 </title>
+  <title> JS module programming | 王楷文的个人主页 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +284,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/JS-module-programming/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王楷文">
@@ -293,7 +305,7 @@ Quick">
             
             
               
-                Hello World
+                JS module programming
               
             
           </h1>
@@ -308,7 +320,7 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T12:13:24+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T16:06:59+08:00">
                 2017-04-03
               </time>
             
@@ -344,15 +356,26 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>1.模块的对象写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var module1=new Object(&#123;</div><div class="line">	_count : 0;</div><div class="line">	m1 : function()&#123;</div><div class="line">		...</div><div class="line">	&#125;,</div><div class="line">	m2 : function()&#123;</div><div class="line">		...	</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>使用的时候直接调用模块属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1.m1();</div></pre></td></tr></table></figure>
+<p>BUT 外部可以更改内部变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1._count=10;</div></pre></td></tr></table></figure>
+<p>2.立即执行函数模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var module1=(function()&#123;</div><div class="line">			var _count : 0;</div><div class="line">			var m1 : function()&#123;</div><div class="line">				...</div><div class="line">			&#125;,</div><div class="line">			var m2 : function()&#123;</div><div class="line">				...	</div><div class="line">			&#125;</div><div class="line">		   return&#123;</div><div class="line">				m1:m1,</div><div class="line">				m2:m2</div><div class="line">	  &#125;</div><div class="line">   &#125;)();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>console.log(module1._count) //undefined<br>以上是模块的基本写法</p>
+</blockquote>
+<p>4.放大模式<br>模块很大，或者模块继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(module1);</div></pre></td></tr></table></figure>
+<p>添加了一个新方法m3，return新的module1模块</p>
+<p>5.宽放大模式<br>如果module1加载不存在空对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(window.module1||&#123;&#125;);</div></pre></td></tr></table></figure>
+<p>参数可以是空对象</p>
+<p>6.输入全局变量<br>独立性是模块最重要的部分，所以不与程序的其他部分交互显得尤为重要，为了在模块内部调用全局变量，需要将变量显示的输入模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var module1=(function($,YAHOO)&#123;</div><div class="line">	//...</div><div class="line">&#125;)(JQuery,YAHOO);</div></pre></td></tr></table></figure>
+<p>保证模块的独立性，并且让它的依赖关系变得明显</p>
 
       
     </div>
@@ -380,6 +403,12 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/模块化/" rel="tag"># 模块化</a>
+          
+        </div>
+      
 
       
         
@@ -389,15 +418,15 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/03/JS基本数据结构实现-线性表/" rel="next" title="JS基本数据结构实现--线性表">
+                <i class="fa fa-chevron-left"></i> JS基本数据结构实现--线性表
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/03/我的第一篇文章/" rel="prev" title="我的第一篇文章">
-                我的第一篇文章 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -450,17 +479,8 @@ Quick">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/wkw.jpg"
@@ -542,22 +562,6 @@ Quick">
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

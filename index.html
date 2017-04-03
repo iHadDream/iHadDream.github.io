@@ -270,6 +270,449 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/JS-module-programming/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王楷文">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/wkw.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王楷文的个人主页">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/03/JS-module-programming/" itemprop="url">
+                  JS module programming
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T16:06:59+08:00">
+                2017-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.模块的对象写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var module1=new Object(&#123;</div><div class="line">	_count : 0;</div><div class="line">	m1 : function()&#123;</div><div class="line">		...</div><div class="line">	&#125;,</div><div class="line">	m2 : function()&#123;</div><div class="line">		...	</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>使用的时候直接调用模块属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1.m1();</div></pre></td></tr></table></figure>
+<p>BUT 外部可以更改内部变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1._count=10;</div></pre></td></tr></table></figure>
+<p>2.立即执行函数模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var module1=(function()&#123;</div><div class="line">			var _count : 0;</div><div class="line">			var m1 : function()&#123;</div><div class="line">				...</div><div class="line">			&#125;,</div><div class="line">			var m2 : function()&#123;</div><div class="line">				...	</div><div class="line">			&#125;</div><div class="line">		   return&#123;</div><div class="line">				m1:m1,</div><div class="line">				m2:m2</div><div class="line">	  &#125;</div><div class="line">   &#125;)();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>console.log(module1._count) //undefined<br>以上是模块的基本写法</p>
+</blockquote>
+<p>4.放大模式<br>模块很大，或者模块继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(module1);</div></pre></td></tr></table></figure>
+<p>添加了一个新方法m3，return新的module1模块</p>
+<p>5.宽放大模式<br>如果module1加载不存在空对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(window.module1||&#123;&#125;);</div></pre></td></tr></table></figure>
+<p>参数可以是空对象</p>
+<p>6.输入全局变量<br>独立性是模块最重要的部分，所以不与程序的其他部分交互显得尤为重要，为了在模块内部调用全局变量，需要将变量显示的输入模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var module1=(function($,YAHOO)&#123;</div><div class="line">	//...</div><div class="line">&#125;)(JQuery,YAHOO);</div></pre></td></tr></table></figure>
+<p>保证模块的独立性，并且让它的依赖关系变得明显</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/JS基本数据结构实现-线性表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王楷文">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/wkw.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王楷文的个人主页">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/03/JS基本数据结构实现-线性表/" itemprop="url">
+                  JS基本数据结构实现--线性表
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T16:04:15+08:00">
+                2017-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.顺序存储结构<br>利于存取，不利于插入删除</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;姓名&quot;/&gt;
+&lt;label for=&quot;sex&quot;&gt;性别&lt;/label&gt;
+&lt;select  id=&quot;sex&quot; &gt;
+    &lt;option value=&quot;male&quot;&gt;男&lt;/option&gt;
+    &lt;option value=&quot;female&quot;&gt;女&lt;/option&gt;
+&lt;/select&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;索引(从0开始)&quot; id=&quot;index&quot;&gt;&lt;/input&gt;
+&lt;input type=&quot;button&quot; value=&quot;插入&quot; id=&quot;insert&quot;&gt;&lt;/input&gt;
+&lt;input type=&quot;button&quot; value=&quot;获取&quot; id=&quot;get&quot;/&gt;
+&lt;input type=&quot;button&quot; value=&quot;删除&quot; id=&quot;del&quot;/&gt;
+&lt;h3&gt;结果&lt;/h3&gt;
+&lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+</code></pre><p>var sqList=[],<br>insert=document.getElementById(‘insert’),<br>result=document.getElementById(‘result’),<br>getBtn=document.getElementById(‘get’),<br>delBtn=document.getElementById(‘del’);</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&gt;function insertItem(name,sex,i)&#123; //插入</div><div class="line">&gt;var obj=&#123;&#125;;</div><div class="line">&gt;obj.name=this.name;</div><div class="line">&gt;obj.sex=this.sex;</div><div class="line">&gt;if(i&lt;0||i&gt;sqList.length)&#123;</div><div class="line">&gt;result.innerHTML=&quot;it&apos;s illegal&quot;+i+&quot;&lt;br&gt;&quot;</div><div class="line">&gt;&#125;</div><div class="line">&gt;else&#123;</div><div class="line">&gt;for(var j=sqList.length-1;j&gt;i;j++)&#123;</div><div class="line">&gt;sqList[j+1]&#125;=sqList[j];</div><div class="line">&gt;&#125;</div><div class="line">&gt;sqList[i]=obj;</div><div class="line">&gt;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function deleteItem(index)&#123;//删除</div><div class="line">	if(sqList.length==0)&#123;</div><div class="line">		result.innerHTML=&quot;sqList is null&quot;;</div><div class="line">	&#125;</div><div class="line">	if(index&lt;0||index&gt;sqList.length-1)&#123;</div><div class="line">		result.innerHTML=&quot;index is illegal&quot;;</div><div class="line">	&#125;else if(index&lt;sqList.length-1)&#123;</div><div class="line">		for(var k=index;k&lt;sqList.length-1;k++)&#123;</div><div class="line">			sqList[k]=sqList[k+1];</div><div class="line">		&#125;</div><div class="line">		sqList.length--;</div><div class="line">	&#125;</div><div class="line">	return sqList;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2.链式存储结构<br>整个链表是靠指针链接起来的。这就避免了内存浪费或溢出，但是对于获取某个元素却比顺序结构要麻烦</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">var LinkNode=function(data,next)&#123;//定义单链表</div><div class="line">	this.data=data;</div><div class="line">	this.next=next;</div><div class="line">&#125;</div><div class="line">//单链表初始化</div><div class="line">function createLink()&#123;</div><div class="line">	var list=new LinkNode(0,null);</div><div class="line">	return list;</div><div class="line">//这个空链表拥有一个头结点，头结点的数据域data存储的不是真的数据，而是该链表长度，同时，当链表为空的时候，头结点的next指针域是null的</div><div class="line"></div><div class="line">function insertLink(list,i,data)&#123; //插入一个节点</div><div class="line">	var obj=list;</div><div class="line">	var j=1;</div><div class="line">	while(obj&amp;&amp;j&lt;i)&#123;</div><div class="line">		j++;</div><div class="line">		obj=obj.next;</div><div class="line">	&#125;</div><div class="line">	if(!obj||i&lt;1)&#123;</div><div class="line">		return error;</div><div class="line">	&#125;</div><div class="line">	var sNode = new LinkNode(data,obj.next);</div><div class="line">	obj.next = sNode;</div><div class="line">	list.data+=1;</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">//首先找到插入位置的链表指针指向哪里，再把要插入元素的指针指向这里，把上一个元素的指针指向插入元素的位置，数据长度加一</div><div class="line"></div><div class="line">function deleteItem(list,i)&#123;</div><div class="line">	var obj=list;</div><div class="line">	var j=1;</div><div class="line">	while(obj&amp;&amp;j&lt;i)&#123;</div><div class="line">		j++;</div><div class="line">		obj=obj.next;</div><div class="line">	&#125;</div><div class="line">	var item=obj.next;</div><div class="line">	obj=item.next;</div><div class="line">	item=null;</div><div class="line">	list.data-=1;</div><div class="line">	return list;</div><div class="line">	//同时为了让GC尽快回收被删除元素占用的空间，这里让其item=null(在C语言中可以 采用free函数，在js中设为null会让浏览器尽快通过引用计数或标记删除策略通知GC回收空间)。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/JS面向对象编程-第四章-对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王楷文">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/wkw.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王楷文的个人主页">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/03/JS面向对象编程-第四章-对象/" itemprop="url">
+                  JS面向对象编程--第四章 对象
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T16:03:47+08:00">
+                2017-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>导读：</p>
+<ul>
+<li>如何创建并使用对象</li>
+<li>什么是构造器函数</li>
+<li>JS中的内置对象及其应用</li>
+</ul>
+<p><em>4.1从数组到对象</em><br>对象示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var hero=&#123;</div><div class="line">	name:&quot;wkw&quot;,</div><div class="line">	age:&quot;22&quot;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>属性名必须加引号的情况：<br>JS的保留字<br>包含空格/其他字符<br>数字开头</p>
+<p><em>4.1.3访问对象属性</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hero.name //wkw</div><div class="line">hero[&apos;name&apos;] //wkw</div><div class="line">hero.firseName //undefined</div></pre></td></tr></table></figure>
+<p><em>4.1.4调用对象方法</em><br>hero.say();<br><em>4.1.5修改属性与方法</em><br>删除</p>
+<blockquote>
+<p>delete hero.name;</p>
+</blockquote>
+<p>某些内建对象属性不可改变，（Math.PI）<br>ES5允许创建不可改变的对象</p>
+<p><em>4.1.6使用this值</em><br>当我们引用this时，实际上就是“这个对象”或者“当前对象”</p>
+<p><em>4.1.7构造器函数</em><br>constructor function</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function Hero(name)&#123;</div><div class="line">	this.name = name;</div><div class="line">	this.worker = &quot;softwareEg&quot;;</div><div class="line">	this.whoAreYou=function()&#123;</div><div class="line">		return &quot;I am&quot;+name+&quot;im a&quot;+worker;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var h1=new Hero(&apos;wkw&apos;);</div><div class="line">var h2=new Hero(&apos;zjq&apos;);</div></pre></td></tr></table></figure>
+<p>构造器函数大写</p>
+<p><em>4.1.8全局对象</em><br>不使用new操作符调用构造器函数情况，this指向全局变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function Hero(name)&#123;</div><div class="line">	this.name=name;</div><div class="line">&#125;</div><div class="line">var j=Hero(&apos;wkw&apos;);</div><div class="line">typeof j; //undefined,无返回值返回undefined</div><div class="line">name;//wkw</div><div class="line">window.name;//wkw</div></pre></td></tr></table></figure>
+<p><em>4.1.9构造器属性</em><br>constructor 属性指向用于创建该对象的构造器函数的引用</p>
+<p><em>4.1.10instanceof操作符</em><br>一个对象是否由指定的构造器创建的<br>function Hero(){}<br>var h=new Hero;<br>var o ={}；<br>h instanceof Hero; //true<br>h instanceof Object;//true<br>o instanceof Object;//true </p>
+<p>4.1.11返回对象的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function factory(name)&#123;</div><div class="line">	return&#123;</div><div class="line">		name:name</div><div class="line">	&#125;;</div><div class="line">&#125;</div><div class="line">var o = factory(&apos;wkw&apos;);</div><div class="line">o.name;//wkw</div><div class="line">o.constructor;//function Object()&#123;[Native Code]&#125;</div></pre></td></tr></table></figure>
+<p>实际上构造器函数也能返回对象</p>
+<p>4.2内建对象<br>数据封装类对象–Object,Array,Boolean,Number,String<br>工具类对象–Math,Data,RegExp<br>错误类对象–</p>
+<p>4.2.1Object<br>“空”对象并非完全无用<br>o.constructor 返回构造器函数的引用<br>o.toString()  返回对象的描述字符串//alert，连接字符串等<br>o.valueOf()  返回对象的单值描述信息，通常返回对象本身//简单对象返回自己</p>
+<p>4.2.2Array<br>数组方法<br>join（）返回一个由目标数组中所有元素用逗号连接而成的字符串<br>slice（）不修改数组 返回某个片段<br>splice （移除首索引，移除尾索引，填补的新元素） 修改目标数组，移除并返回指定切片</p>
+<p>4.2.3Function<br>prototype属性：</p>
+<ol>
+<li>每个函数的prototype属性中都指向了一个对象</li>
+<li>他只有在该函数是构造器时才会发挥作用</li>
+<li>该函数创建的所有对象都会持有一个该prototype属性的引用，并可以将当做自身的属性来用</li>
+</ol>
+<p>toString方法可查看函数的源代码<br>用它来区分函数时本地还是自定义的</p>
+<p>call和apply<br>触发函数，指定相关的调用参数<br>让一个对象去”借用“另一个对象的方法，为己所用//代码重用</p>
+<p>推断对象类型<br>Object.prototype.toString.call([]);//[object Array]</p>
+<p>Array.prototype.toString.call(a);<br>a.toString();//已经被重写</p>
+<p>4.2.4 Boolean<br>var b=new Boolean();<br>b是一个对象，转换成布尔值用valueOf（）方法</p>
+<p>4.2.6String对象的一些方法<br>toUpperCase(),toLowerCase()大小写<br>charAt() 返回指定位置的字符，位置不存在返回空字符串<br>indexOf()字符串内部搜索，从0开始<br>slice()/substring()返回字符串指定的区间<br>split() 传递的字符来分割字符串成一个数组<br>concat()合并字符串<br>以上返回都是新的字符串</p>
+<p>4.2.7正则表达式<br>//待学习</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/我的第一篇文章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -560,7 +1003,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -568,6 +1011,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
