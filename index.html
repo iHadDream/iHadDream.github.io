@@ -493,29 +493,17 @@
 
       
         
-          
-            <p>1.模块的对象写法<br>&lt;！–more–&gt;</p>
+          <p>1.模块的对象写法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var module1=new Object(&#123;</div><div class="line">	_count : 0;</div><div class="line">	m1 : function()&#123;</div><div class="line">		...</div><div class="line">	&#125;,</div><div class="line">	m2 : function()&#123;</div><div class="line">		...	</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>使用的时候直接调用模块属性</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1.m1();</div></pre></td></tr></table></figure>
-<p>BUT 外部可以更改内部变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1._count=10;</div></pre></td></tr></table></figure>
-<p>2.立即执行函数模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var module1=(function()&#123;</div><div class="line">			var _count : 0;</div><div class="line">			var m1 : function()&#123;</div><div class="line">				...</div><div class="line">			&#125;,</div><div class="line">			var m2 : function()&#123;</div><div class="line">				...	</div><div class="line">			&#125;</div><div class="line">		   return&#123;</div><div class="line">				m1:m1,</div><div class="line">				m2:m2</div><div class="line">	  &#125;</div><div class="line">   &#125;)();</div></pre></td></tr></table></figure>
-<blockquote>
-<p>console.log(module1._count) //undefined<br>以上是模块的基本写法</p>
-</blockquote>
-<p>4.放大模式<br>模块很大，或者模块继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(module1);</div></pre></td></tr></table></figure>
-<p>添加了一个新方法m3，return新的module1模块</p>
-<p>5.宽放大模式<br>如果module1加载不存在空对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(window.module1||&#123;&#125;);</div></pre></td></tr></table></figure>
-<p>参数可以是空对象</p>
-<p>6.输入全局变量<br>独立性是模块最重要的部分，所以不与程序的其他部分交互显得尤为重要，为了在模块内部调用全局变量，需要将变量显示的输入模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var module1=(function($,YAHOO)&#123;</div><div class="line">	//...</div><div class="line">&#125;)(JQuery,YAHOO);</div></pre></td></tr></table></figure>
-<p>保证模块的独立性，并且让它的依赖关系变得明显</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/03/JS-module-programming/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
