@@ -105,7 +105,7 @@ underscore调用_()方法进行封装，可以通过underscore的value()方法�
 underscore template()函数声明
 
 &amp;lt;% %&amp;">
-<meta property="og:updated_time" content="2017-04-11T08:21:41.040Z">
+<meta property="og:updated_time" content="2017-04-11T08:31:37.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="backbone in underscore.js">
 <meta name="twitter:description" content="backbone必须依赖underscore.js才能够使用，必须通过underscore.js的函数来完成访问页面元素等基本操作
@@ -376,8 +376,8 @@ underscore template()函数声明
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/study/" itemprop="url" rel="index">
+                    <span itemprop="name">study</span>
                   </a>
                 </span>
 
@@ -429,45 +429,54 @@ underscore template()函数声明
 <ol>
 <li>&lt;% %&gt;逻辑代码，渲染后不会展现</li>
 <li>&lt;%= %&gt;数据类型，选然后展示数据</li>
-<li>&lt;%- %&gt;数据类型，将html转换常用字符串，避免XSS攻击</li>
+<li><p>&lt;%- %&gt;数据类型，将html转换常用字符串，避免XSS攻击</p>
+<p> _.template(tmplString,[data],[setting])</p>
+</li>
 </ol>
-<blockquote>
-<p>_.template(tmplString,[data],[setting])</p>
-</blockquote>
-<p>1.underscore对象封装</p>
-<blockquote>
-<p>var jsData = {<br>name:’data’<br>}</p>
-<p>var underscoreData = _(jsData);</p>
-<p>underscoreData.value();<br>//通过value方法获取原生数据</p>
-</blockquote>
-<p>2.优先调用js1.6内置方法</p>
+<p>1.underscore对象封装<br>    var jsData = {<br>    name:’data’<br>    }</p>
+<pre><code>var underscoreData = _(jsData);
+
+underscoreData.value();
+//通过value方法获取原生数据
+</code></pre><p>2.优先调用js1.6内置方法</p>
 <p>3.改变命名空间</p>
-<p>_下划线容易引起冲突，用noConflict()改变underscore的命名</p>
-<blockquote>
-<p>var us = _.noConflict();</p>
-</blockquote>
+<p><em>下划线容易引起冲突，用noConflict()改变underscore的命名<br>    var us = </em>.noConflict();</p>
 <p>4.链式操作</p>
-<p>jQuery中的链式操作</p>
+<p>jQuery中的链式操作<br>    $(‘a’).css(‘position’,’relative’).attr(‘href’,’#’).show();</p>
 <blockquote>
-<p>$(‘a’).css(‘position’,’relative’).attr(‘href’,’#’).show();<br>underscore同样支持链式操作，但要先声明chain()方法<br>var arr=[10,20,30];<br>_(arr).chain().map(function(item){return item++;}).first().value();<br>将调用的方法封装在一个闭包内，返回值封装为一个对象并返回</p>
-<p>var result =function(obj,chain){</p>
-<p>  return chain?_(obj).chain():obj;</p>
-<p>}</p>
+<p>underscore同样支持链式操作，但要先声明chain()方法<br>    var arr=[10,20,30];<br>    _(arr).chain().map(function(item){return item++;}).first().value();<br>将调用的方法封装在一个闭包内，返回值封装为一个对象并返回</p>
 </blockquote>
-<p>5.拓展underscore<br>通过mixin()方法向us中拓展自定义方法</p>
-<blockquote>
-<p>_.mixin({</p>
-<p> method1: function(object){<br>     //todo<br> }<br> …<br>});</p>
-</blockquote>
-<p>新方法追加到us原型对象中，所有创建的us对象都可以使用这些新方法</p>
+<pre><code>var result =function(obj,chain){
+
+   return chain?_(obj).chain():obj;
+
+}
+</code></pre><p>5.拓展underscore<br>通过mixin()方法向us中拓展自定义方法</p>
+<pre><code>&gt;_.mixin({
+&gt;  
+&gt;  method1: function(object){
+&gt;      //todo
+&gt;  }
+&gt;  ...
+&gt;});
+</code></pre><p>新方法追加到us原型对象中，所有创建的us对象都可以使用这些新方法</p>
 <p>6.遍历集合<br>each(),map()迭代一个集合，并处理集合中的每一个元素</p>
-<p>var arr = [1,2,3];</p>
-<p>_(arr).map(function(item,i){</p>
-<pre><code>arr[i] = item + 1;
-</code></pre><p>});</p>
-<p>var obj ={<br>   first:1,second:2<br>}<br>_(obj).each(function(value,key){<br>  return obj[key] = value + 1;<br>});</p>
-<p>map方法将返回的结果记录到一个新的数组并返回</p>
-<p>7.函数节流<br>debounce() , throttle()<br>input提示内容<br>控制函数不被频繁调用，节省客户端及服务器资源<br>debounce 关注函数执行间隔<br>throttle 关注函数执行频率</p>
+<pre><code>var arr = [1,2,3];
+
+_(arr).map(function(item,i){
+
+arr[i] = item + 1;
+
+});
+
+var obj ={
+   first:1,second:2
+}
+_(obj).each(function(value,key){
+  return obj[key] = value + 1;
+});
+</code></pre><p>map方法将返回的结果记录到一个新的数组并返回</p>
+<p>7.函数节流<br>    debounce() , throttle()<br>input提示内容<br>控制函数不被频繁调用，节省客户端及服务器资源<br>debounce 关注函数执行间隔<br>throttle 关注函数执行频率</p>
 <p>8.模板解析</p>
 
       
@@ -643,7 +652,7 @@ underscore template()函数声明
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
