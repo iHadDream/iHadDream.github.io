@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="框架,backbone,underscore.js," />
 
 
 
@@ -87,15 +87,34 @@
 
 
 
-<meta name="description" content="一个努力学习的菜狗子~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王楷文的个人主页">
-<meta property="og:url" content="http://yoursite.com/categories/study/index.html">
+<meta name="description" content="backbone必须依赖underscore.js才能够使用，必须通过underscore.js的函数来完成访问页面元素等基本操作
+
+backbone可以很好的与其他js库一起工作，所以说它是一个库，而不是框架
+underscore调用_()方法进行封装，可以通过underscore的value()方法获取原生js对象中的数据
+underscore template()函数声明
+
+&amp;lt;% %&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="backbone in underscore.js">
+<meta property="og:url" content="http://yoursite.com/2017/04/11/backbone-in-underscore-js/index.html">
 <meta property="og:site_name" content="王楷文的个人主页">
-<meta property="og:description" content="一个努力学习的菜狗子~">
+<meta property="og:description" content="backbone必须依赖underscore.js才能够使用，必须通过underscore.js的函数来完成访问页面元素等基本操作
+
+backbone可以很好的与其他js库一起工作，所以说它是一个库，而不是框架
+underscore调用_()方法进行封装，可以通过underscore的value()方法获取原生js对象中的数据
+underscore template()函数声明
+
+&amp;lt;% %&amp;">
+<meta property="og:updated_time" content="2017-04-11T08:21:41.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王楷文的个人主页">
-<meta name="twitter:description" content="一个努力学习的菜狗子~">
+<meta name="twitter:title" content="backbone in underscore.js">
+<meta name="twitter:description" content="backbone必须依赖underscore.js才能够使用，必须通过underscore.js的函数来完成访问页面元素等基本操作
+
+backbone可以很好的与其他js库一起工作，所以说它是一个库，而不是框架
+underscore调用_()方法进行封装，可以通过underscore的value()方法获取原生js对象中的数据
+underscore template()函数声明
+
+&amp;lt;% %&amp;">
 
 
 
@@ -123,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/study/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/11/backbone-in-underscore-js/"/>
 
 
 
 
 
-  <title> 分类: study | 王楷文的个人主页 </title>
+  <title> backbone in underscore.js | 王楷文的个人主页 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -288,75 +307,283 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        study
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/09/webpack/" itemprop="url">
-              
-                <span itemprop="name">webpack</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-09T20:23:36+08:00"
-              content="2017-04-09" >
-          04-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/08/一个快速使用数据结构基础库/" itemprop="url">
-              
-                <span itemprop="name">一个快速使用数据结构基础库</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-08T15:00:44+08:00"
-              content="2017-04-08" >
-          04-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/backbone-in-underscore-js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王楷文">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/wkw.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王楷文的个人主页">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                backbone in underscore.js
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T15:21:39+08:00">
+                2017-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/04/11/backbone-in-underscore-js/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>backbone必须依赖underscore.js才能够使用，必须通过underscore.js的函数来完成访问页面元素等基本操作</strong></p>
+<hr>
+<p><em>backbone可以很好的与其他js库一起工作，所以说它是一个库，而不是框架</em></p>
+<p>underscore调用_()方法进行封装，可以通过underscore的value()方法获取原生js对象中的数据</p>
+<p>underscore template()函数声明</p>
+<ol>
+<li>&lt;% %&gt;逻辑代码，渲染后不会展现</li>
+<li>&lt;%= %&gt;数据类型，选然后展示数据</li>
+<li>&lt;%- %&gt;数据类型，将html转换常用字符串，避免XSS攻击</li>
+</ol>
+<blockquote>
+<p>_.template(tmplString,[data],[setting])</p>
+</blockquote>
+<p>1.underscore对象封装</p>
+<blockquote>
+<p>var jsData = {<br>name:’data’<br>}</p>
+<p>var underscoreData = _(jsData);</p>
+<p>underscoreData.value();<br>//通过value方法获取原生数据</p>
+</blockquote>
+<p>2.优先调用js1.6内置方法</p>
+<p>3.改变命名空间</p>
+<p>_下划线容易引起冲突，用noConflict()改变underscore的命名</p>
+<blockquote>
+<p>var us = _.noConflict();</p>
+</blockquote>
+<p>4.链式操作</p>
+<p>jQuery中的链式操作</p>
+<blockquote>
+<p>$(‘a’).css(‘position’,’relative’).attr(‘href’,’#’).show();<br>underscore同样支持链式操作，但要先声明chain()方法<br>var arr=[10,20,30];<br>_(arr).chain().map(function(item){return item++;}).first().value();<br>将调用的方法封装在一个闭包内，返回值封装为一个对象并返回</p>
+<p>var result =function(obj,chain){</p>
+<p>  return chain?_(obj).chain():obj;</p>
+<p>}</p>
+</blockquote>
+<p>5.拓展underscore<br>通过mixin()方法向us中拓展自定义方法</p>
+<blockquote>
+<p>_.mixin({</p>
+<p> method1: function(object){<br>     //todo<br> }<br> …<br>});</p>
+</blockquote>
+<p>新方法追加到us原型对象中，所有创建的us对象都可以使用这些新方法</p>
+<p>6.遍历集合<br>each(),map()迭代一个集合，并处理集合中的每一个元素</p>
+<p>var arr = [1,2,3];</p>
+<p>_(arr).map(function(item,i){</p>
+<pre><code>arr[i] = item + 1;
+</code></pre><p>});</p>
+<p>var obj ={<br>   first:1,second:2<br>}<br>_(obj).each(function(value,key){<br>  return obj[key] = value + 1;<br>});</p>
+<p>map方法将返回的结果记录到一个新的数组并返回</p>
+<p>7.函数节流<br>debounce() , throttle()<br>input提示内容<br>控制函数不被频繁调用，节省客户端及服务器资源<br>debounce 关注函数执行间隔<br>throttle 关注函数执行频率</p>
+<p>8.模板解析</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>看到底了就给我犒劳一毛两毛的把~！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weChatMoney.jpg" alt="王楷文 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/aLiPay.jpg" alt="王楷文 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/框架/" rel="tag"># 框架</a>
+          
+            <a href="/tags/backbone/" rel="tag"># backbone</a>
+          
+            <a href="/tags/underscore-js/" rel="tag"># underscore.js</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/09/webpack/" rel="next" title="webpack">
+                <i class="fa fa-chevron-left"></i> webpack
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -364,6 +591,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -594,6 +827,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
