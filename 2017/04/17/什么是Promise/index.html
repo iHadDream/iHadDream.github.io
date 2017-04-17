@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="模块化," />
+  <meta name="keywords" content="异步," />
 
 
 
@@ -87,25 +87,49 @@
 
 
 
-<meta name="description" content="1.模块的对象写法
-123456789var module1=new Object(&amp;#123;	_count : 0;	m1 : function()&amp;#123;		...	&amp;#125;,	m2 : function()&amp;#123;		...		&amp;#125;&amp;#125;);
-使用的时候直接调用模块属性
-1module1.m1();">
+<meta name="description" content="原生AJAX
+var url = &amp;apos;http://baidu.com&amp;apos;;
+var result;
+
+new XHR = new XMLHttpRequest();
+
+XHR.open(GET,url,true);
+
+XHR.send();
+
+XHR.onreadystatechange=function(){
+    if(XHR.readyState==4 &amp;amp;&amp;amp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS module programming">
-<meta property="og:url" content="http://yoursite.com/2017/04/03/JS-module-programming/index.html">
+<meta property="og:title" content="什么是Promise">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/什么是Promise/index.html">
 <meta property="og:site_name" content="王楷文的个人主页">
-<meta property="og:description" content="1.模块的对象写法
-123456789var module1=new Object(&amp;#123;	_count : 0;	m1 : function()&amp;#123;		...	&amp;#125;,	m2 : function()&amp;#123;		...		&amp;#125;&amp;#125;);
-使用的时候直接调用模块属性
-1module1.m1();">
-<meta property="og:updated_time" content="2017-04-04T02:19:47.896Z">
+<meta property="og:description" content="原生AJAX
+var url = &amp;apos;http://baidu.com&amp;apos;;
+var result;
+
+new XHR = new XMLHttpRequest();
+
+XHR.open(GET,url,true);
+
+XHR.send();
+
+XHR.onreadystatechange=function(){
+    if(XHR.readyState==4 &amp;amp;&amp;amp">
+<meta property="og:updated_time" content="2017-04-17T12:03:54.046Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS module programming">
-<meta name="twitter:description" content="1.模块的对象写法
-123456789var module1=new Object(&amp;#123;	_count : 0;	m1 : function()&amp;#123;		...	&amp;#125;,	m2 : function()&amp;#123;		...		&amp;#125;&amp;#125;);
-使用的时候直接调用模块属性
-1module1.m1();">
+<meta name="twitter:title" content="什么是Promise">
+<meta name="twitter:description" content="原生AJAX
+var url = &amp;apos;http://baidu.com&amp;apos;;
+var result;
+
+new XHR = new XMLHttpRequest();
+
+XHR.open(GET,url,true);
+
+XHR.send();
+
+XHR.onreadystatechange=function(){
+    if(XHR.readyState==4 &amp;amp;&amp;amp">
 
 
 
@@ -133,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/03/JS-module-programming/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/17/什么是Promise/"/>
 
 
 
 
 
-  <title> JS module programming | 王楷文的个人主页 </title>
+  <title> 什么是Promise | 王楷文的个人主页 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -308,7 +332,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/JS-module-programming/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/17/什么是Promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王楷文">
@@ -329,7 +353,7 @@
             
             
               
-                JS module programming
+                什么是Promise
               
             
           </h1>
@@ -344,8 +368,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T16:06:59+08:00">
-                2017-04-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T18:13:00+08:00">
+                2017-04-17
               </time>
             
 
@@ -355,6 +379,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/study/" itemprop="url" rel="index">
+                    <span itemprop="name">study</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -363,7 +409,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/03/JS-module-programming/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/17/什么是Promise/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -390,27 +436,133 @@
       
 
       
-        <p>1.模块的对象写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var module1=new Object(&#123;</div><div class="line">	_count : 0;</div><div class="line">	m1 : function()&#123;</div><div class="line">		...</div><div class="line">	&#125;,</div><div class="line">	m2 : function()&#123;</div><div class="line">		...	</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>使用的时候直接调用模块属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1.m1();</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>BUT 外部可以更改内部变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module1._count=10;</div></pre></td></tr></table></figure>
-<p>2.立即执行函数模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var module1=(function()&#123;</div><div class="line">			var _count : 0;</div><div class="line">			var m1 : function()&#123;</div><div class="line">				...</div><div class="line">			&#125;,</div><div class="line">			var m2 : function()&#123;</div><div class="line">				...	</div><div class="line">			&#125;</div><div class="line">		   return&#123;</div><div class="line">				m1:m1,</div><div class="line">				m2:m2</div><div class="line">	  &#125;</div><div class="line">   &#125;)();</div></pre></td></tr></table></figure>
-<blockquote>
-<p>console.log(module1._count) //undefined<br>以上是模块的基本写法</p>
-</blockquote>
-<p>4.放大模式<br>模块很大，或者模块继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(module1);</div></pre></td></tr></table></figure>
-<p>添加了一个新方法m3，return新的module1模块</p>
-<p>5.宽放大模式<br>如果module1加载不存在空对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var module1=(function(mod)&#123;</div><div class="line">	mod.m3=function()&#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">	return mod;</div><div class="line">&#125;)(window.module1||&#123;&#125;);</div></pre></td></tr></table></figure>
-<p>参数可以是空对象</p>
-<p>6.输入全局变量<br>独立性是模块最重要的部分，所以不与程序的其他部分交互显得尤为重要，为了在模块内部调用全局变量，需要将变量显示的输入模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var module1=(function($,YAHOO)&#123;</div><div class="line">	//...</div><div class="line">&#125;)(JQuery,YAHOO);</div></pre></td></tr></table></figure>
-<p>保证模块的独立性，并且让它的依赖关系变得明显</p>
+        <p>原生AJAX</p>
+<pre><code>var url = &apos;http://baidu.com&apos;;
+var result;
+
+new XHR = new XMLHttpRequest();
+
+XHR.open(GET,url,true);
+
+XHR.send();
+
+XHR.onreadystatechange=function(){
+    if(XHR.readyState==4 &amp;&amp; XHR.status == 200){
+        result =  XHR.response;
+        console.log(result);
+    }
+}
+</code></pre><p>如果要利用这个请求的返回结果，就得在上面的onreadystatechange函数中嵌套一个新的ajax请求</p>
+<pre><code>var url = &apos;http://baidu.com&apos;;
+var result;
+
+new XHR = new XMLHttpRequest();
+
+XHR.open(&apos;GET&apos;,url,true);
+
+XHR.send();
+
+XHR.onreadystatechange=function(){
+    if(XHR.readyState==4 &amp;&amp; XHR.status == 200){
+        result =  XHR.response;
+        console.log(result);
+
+        //new add
+        var url2=&apos;http://baidu.com/&apos;+url.param;
+        new XHR2 = new XMLHttpRequest();
+        XHR2.open(&apos;GET&apos;,url2,true);
+        XHR2.send();
+        XHR2.onreadystatechange=function(){
+                ...    
+        }
+    }
+}
+</code></pre><p>当出现很多请求时，出现很多很多回调函数，成为 回调地狱</p>
+<p><strong>Promise</strong> 解决了这个问题</p>
+<p>当然它还能够将数据请求与数据处理分开</p>
+<p>promise对象有三种状态</p>
+<p>1.pending: 等待中，暂时还没有结果</p>
+<p>2.resolved: 已经完成，收到想要的结果，可以继续往下执行</p>
+<p>3.rejected: 也得到结果，但是结果并非我们所愿，所以拒绝执行</p>
+<p>状态只能从pending改变到resolved/rejected</p>
+<p>promise构造函数中第一个参数时一个函数，来执行promise状态变化</p>
+<pre><code>new Promise(function(resolved,reject){
+    if(true){resolved()};
+    if(false){reject()};
+})
+</code></pre><p>Promise对象中的then方法，接受构造函数中处理的状态变化，分别对应执行，有2个参数，第一个参数接受resolved状态的执行，第二个参数接受rejected状态的执行</p>
+<pre><code>function fn(num){
+    return new Promise(function(resolved,reject){
+                if(typeof num == &apos;number&apos;){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }).then(function(){
+                console.log(&quot;这是一个数字&quot;);
+            },function(){
+                console.log(&quot;这不是一个数字&quot;);
+            })
+}
+
+fn(&quot;aaasdsa&quot;);
+fn(1244);
+</code></pre><p>then方法也会返回一个promise对象，因此可以链式调用then方法，解决回调地狱的主要方式</p>
+<pre><code>function fn(num){
+    return new Promise(function(resolved,reject){
+                if(typeof num == &apos;number&apos;){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }).then(function(){
+                console.log(&quot;这是一个数字&quot;);
+            }).then(null,function(){
+                console.log(&quot;这不是一个数字&quot;)
+            })
+}
+
+fn(&quot;aaasdsa&quot;);
+fn(1244);
+</code></pre><p>Promise中的数据传递</p>
+<pre><code>var fn = function(num){
+      return  new Promise(function(resolve,reject){
+        if(typeof num == &quot;number&quot;){
+            resolve(num);
+        }else{
+            reject(&apos;TypeofError&apos;);
+        }
+    })
+}
+fn(2).then(function(num){
+    console.log(&quot;first:&quot;+num);
+    return num+1;
+}).then(function(num){
+    console.log(&quot;second:&quot;+num);
+    return num+1;
+}).then(function(num){
+    console.log(&quot;third:&quot;+num);
+    return num+1;
+});
+</code></pre><p>利用Promise的知识，对最开始的ajax进行一个简单的封装<br>    var url=’<a href="https://hq.tigerbrokers.com/fundamental/finance_calendar/getType/2017-02-26/2017-06-10" target="_blank" rel="external">https://hq.tigerbrokers.com/fundamental/finance_calendar/getType/2017-02-26/2017-06-10</a>‘;<br>    //封装一个get请求<br>    function getJSON(url){<br>        return new Promise(function(resolve,reject){<br>            var XHR = new XMLHttpRequest();<br>            XHR.open(‘GET’,url,true);<br>            XHR.send();</p>
+<pre><code>        XHR.onreadychange = function(){
+            if(XHR.readystate==4){
+                if(XHR.status==200){
+                    try{
+                        var response =  JSON.parse(XHR.responseText);
+                        resolve(response);
+                    }catch(e){
+                        reject(e);
+                    }
+                }else{
+                    reject(new Error(XHR.statusText));
+                }
+            }
+        }
+    })
+}
+getJSON(url).then(resp=&gt;console.log(resp));
+</code></pre><p>为了健壮性，处理了很多可能出现的异常，总之，就是正确的返回结果，就resolve一下，错误的返回结果，就reject一下。并且利用上面的参数传递的方式，将正确结果或者错误信息通过他们的参数传递出来。</p>
 
       
     </div>
@@ -461,7 +613,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/模块化/" rel="tag"># 模块化</a>
+            <a href="/tags/异步/" rel="tag"># 异步</a>
           
         </div>
       
@@ -474,8 +626,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/03/gulp-begin/" rel="next" title="gulp begin">
-                <i class="fa fa-chevron-left"></i> gulp begin
+              <a href="/2017/04/11/backbone-in-underscore-js/" rel="next" title="backbone in underscore.js">
+                <i class="fa fa-chevron-left"></i> backbone in underscore.js
               </a>
             
           </div>
@@ -483,10 +635,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/03/JS-module-programming2-AMD-rule/" rel="prev" title="JS module programming2---AMD rule">
-                JS module programming2---AMD rule <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
